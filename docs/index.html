@@ -636,27 +636,6 @@ h.each(n,function(a,b){h.fn.DataTable[a]=b});return h.fn.dataTable});
              });
          });
     </script>
-    <script type="text/javascript">
-    
-    $(document).ready(function(){  
-      $('.sec').not("#standarddiv").hide();
-      
-      $('.show').click(function () {
-        
-        var t = $(this).attr('target');
-
-        if($(this).hasClass("show-active")) {
-          
-          $(this).removeClass("show-active");
-          $('div[target=' + t + ']').removeClass("show-active");
-         
-          $('#standarddiv').fadeIn(400).siblings('.sec').fadeOut(0);
-        } else {
-          $("div.show-active").removeClass("show-active");
-          $('div[target=' + t + ']').addClass("show-active");
-          $('#section' + $(this).attr('target')).fadeIn(400).siblings('.sec').fadeOut(0);
-        }
-      });
 
 <style type="text/css">
   code{white-space: pre-wrap;}
