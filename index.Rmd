@@ -1,0 +1,55 @@
+---
+output:
+  html_document:
+    includes: 
+      in_header: "DT.html"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+library(kableExtra)
+library(dplyr)
+```
+
+````{r, echo = F}
+mhb_baseurl <- 'https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_Msc_ECMX_2019.pdf#page='
+
+#mhb_baseurl <- "file:///Users/Martin/Desktop/ModHb_Msc_ECMX_2019.pdf#page="
+
+Kurse <- read_xlsx("KurseMscECMX.xlsx", skip = 2, sheet = "Kursliste") %>%
+  distinct(Kurs, Ort, .keep_all = T) %>% 
+  mutate(Course = paste("<a href='", mhb_baseurl, MHB, "'>", Kurs, "</a>", 
+                        sep = "")) %>%
+  mutate('aktuell_angeboten' = paste("<a href='", Link_aktuelle_Veranstaltungsuebersicht, "'>", aktuell_angeboten, "</a>", 
+                        sep = "")) %>%
+  rename(Location = Ort, 
+         Language = Sprache,
+         'Winter 20' = 'aktuell_angeboten')
+
+# Set a 'coming soon' text for courses without URL and add link to 404 page. Add comment if module name is different than course name
+Kurse <- Kurse %>% mutate(Course = ifelse(MHB == "NA",
+                                      paste("<a href='../../404.html'>", Kurs, "</a>", "<br> New course. More info coming soon!", sep = ""), 
+                                      ifelse(Kurs != Modulname,
+                                        paste("<a href='", mhb_baseurl, MHB, "'>", Kurs, "</a>", "<br> Course in the module '", Modulname, "'", sep = ""),
+                                        Course)))
+
+# abbrev. course sections
+Kurse$Section[Kurse$Section == 'ME5 (Economics)'] <- 'ME5'
+Kurse$Section[Kurse$Section == 'ME6 (Applied Econometrics)'] <- 'ME6'
+Kurse$Section[Kurse$Section == 'ME7 (Econometric Methods)'] <- 'ME7'
+
+# set flag symbols
+Kurse$Language[Kurse$Language == "deutsch"] <- "DE"
+Kurse$Language[Kurse$Language == "englisch"] <- "EN"
+Kurse$Language[Kurse$Language == "deutsch/englisch"] <- "DE/EN"
+
+# select columns of interest
+Kurse <- Kurse %>% select(Course, Location, Section, Language, 'Winter 20') 
+
+kable(Kurse, escape = F, table.attr = 'id=\"table_id\"') %>%
+  kable_styling(full_width = T,
+                bootstrap_options = c("striped", "hover", "responsive")) %>%
+  column_spec(1, bold = T, border_right = F, width = "15em") %>%
+  column_spec(2, border_right = F)
+```
