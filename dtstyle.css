@@ -2,3 +2,16 @@
 .dataTable tr {
   height: 2em;
 }
+
+body {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+a {
+  color: #17408F;
+}
+
+#table_id_filter > label > input[type=search] {
+  border-radius: 8px;
+  border: solid #17408F 1px;
+}

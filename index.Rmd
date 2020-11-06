@@ -49,7 +49,10 @@ Kurse$Language[Kurse$Language == "deutsch/englisch"] <- "DE/EN"
 Kurse <- Kurse %>% select(Course, Location, Section, Language, 'Winter 20') %>%
   rename("Offered in winter 20?" = "Winter 20")
 
-kable(Kurse, escape = F, table.attr = 'id=\"table_id\"') %>%
+kable(Kurse, 
+      escape = F, 
+      table.attr = 'id=\"table_id\"', 
+      align = "c") %>%
   kable_styling(full_width = T,
                 bootstrap_options = c("striped", "hover", "responsive")) %>%
   column_spec(1, bold = T, border_right = F, width = "15em") %>%
