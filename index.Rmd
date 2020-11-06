@@ -1,6 +1,7 @@
 ---
 output:
   html_document:
+    css: dtstyle.css
     includes: 
       in_header: "DT.html"
 ---
@@ -45,7 +46,8 @@ Kurse$Language[Kurse$Language == "englisch"] <- "EN"
 Kurse$Language[Kurse$Language == "deutsch/englisch"] <- "DE/EN"
 
 # select columns of interest
-Kurse <- Kurse %>% select(Course, Location, Section, Language, 'Winter 20') 
+Kurse <- Kurse %>% select(Course, Location, Section, Language, 'Winter 20') %>%
+  rename("Offered in winter 20?" = "Winter 20")
 
 kable(Kurse, escape = F, table.attr = 'id=\"table_id\"') %>%
   kable_styling(full_width = T,
