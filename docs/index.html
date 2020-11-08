@@ -632,7 +632,8 @@ h.each(n,function(a,b){h.fn.DataTable[a]=b});return h.fn.dataTable});
          $(document).ready(function() {
              $("#table_id").DataTable({
                dom: '<f<t>ip>',
-               pageLength: 8
+               pageLength: 10,
+               scrollY: "800px"
              });
          });
     </script>
@@ -736,6 +737,9 @@ color: #17408F;
 #table_id_filter > label > input[type=search] {
 border-radius: 8px;
 border: solid #17408F 1px;
+}
+#table_id > tbody tr {
+height: 80px;
 }
 </style>
 

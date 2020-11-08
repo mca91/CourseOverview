@@ -15,3 +15,7 @@ a {
   border-radius: 8px;
   border: solid #17408F 1px;
 }
+
+#table_id > tbody tr {
+  height: 80px;
+}
