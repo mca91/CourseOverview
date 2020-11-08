@@ -20,9 +20,9 @@ mhb_baseurl <- 'https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studi
 
 Kurse <- read_xlsx("KurseMscECMX.xlsx", skip = 2, sheet = "Kursliste") %>%
   distinct(Kurs, Ort, .keep_all = T) %>% 
-  mutate(Course = paste("<a href='", mhb_baseurl, MHB, "'>", Kurs, "</a>", 
+  mutate(Course = paste("<a href='", mhb_baseurl, MHB, "'", "target='_blank'", ">", Kurs, "</a>", 
                         sep = "")) %>%
-  mutate('aktuell_angeboten' = paste("<a href='", Link_aktuelle_Veranstaltungsuebersicht, "'>", aktuell_angeboten, "</a>", 
+  mutate('aktuell_angeboten' = paste("<a href='", Link_aktuelle_Veranstaltungsuebersicht, "'", "target='_blank'", ">", aktuell_angeboten, "</a>", 
                         sep = "")) %>%
   rename(Location = Ort, 
          Language = Sprache,
@@ -32,7 +32,7 @@ Kurse <- read_xlsx("KurseMscECMX.xlsx", skip = 2, sheet = "Kursliste") %>%
 Kurse <- Kurse %>% mutate(Course = ifelse(MHB == "NA",
                                       paste("<a href='../../404.html'>", Kurs, "</a>", "<br> New course. More info coming soon!", sep = ""), 
                                       ifelse(Kurs != Modulname,
-                                        paste("<a href='", mhb_baseurl, MHB, "'>", Kurs, "</a>", "<br> Course in the module '", Modulname, "'", sep = ""),
+                                        paste("<a href='", mhb_baseurl, MHB, "'", "target='_blank'", ">", Kurs, "</a>", "<br> Course in the module '", Modulname, "'", sep = ""),
                                         Course)))
 
 # abbrev. course sections
