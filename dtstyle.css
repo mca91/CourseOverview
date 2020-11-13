@@ -19,3 +19,8 @@ a {
 #table_id > tbody tr {
   height: 80px;
 }
+
+.main-container {
+    max-width: 100% !important;
+}
+
