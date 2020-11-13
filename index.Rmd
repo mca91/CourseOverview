@@ -16,9 +16,7 @@ library(dplyr)
 ````{r, echo = F}
 mhb_baseurl <- 'https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_Msc_ECMX_2019.pdf#page='
 
-#mhb_baseurl <- "file:///Users/Martin/Desktop/ModHb_Msc_ECMX_2019.pdf#page="
-
-Kurse <- read_xlsx("KurseMscECMX.xlsx", skip = 2, sheet = "Kursliste") %>%
+Kurse <- read_xlsx("KurseMscECMX.xlsx", sheet = "Kursliste") %>%
   distinct(Kurs, Ort, .keep_all = T) %>% 
   mutate(Course = paste("<a href='", mhb_baseurl, MHB, "'", "target='_blank'", ">", Kurs, "</a>", 
                         sep = "")) %>%
@@ -46,7 +44,7 @@ Kurse$Language[Kurse$Language == "englisch"] <- "EN"
 Kurse$Language[Kurse$Language == "deutsch/englisch"] <- "DE/EN"
 
 # select columns of interest
-Kurse <- Kurse %>% select(Course, Location, Section, Language, 'Winter 20') %>%
+Kurse <- Kurse %>% select(Course, `Offered by`, Location, Section, Language, 'Winter 20') %>%
   rename("Offered in winter 20?" = "Winter 20")
 
 kable(Kurse, 
