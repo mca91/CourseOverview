@@ -1,4 +1,5 @@
 ---
+title: "course_overview"
 output:
   html_document:
     css: dtstyle.css
