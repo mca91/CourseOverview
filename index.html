@@ -729,8 +729,8 @@ $.fn.dataTableExt.oPagination.listbox = {
              $("#table_id").DataTable({
                 dom : 'lfrtip',
                "sPaginationType": "full_numbers",
-               "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
-               scrollY: "800px"
+               "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ]
+  
              });
          
              
@@ -793,6 +793,7 @@ if (window.hljs) {
 
 
 
+
 <style type="text/css">.dataTable th,
 .dataTable tr {
 height: 2em;
@@ -837,6 +838,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -940,14 +944,15 @@ Location
 Language
 </th>
 <th style="text-align:center;">
-Offered in Winter 21?
+Offered in summer 22?
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=3" target="_blank">Statistical Theory</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=3" target="_blank">Statistical
+Theory</a>
 </td>
 <td style="text-align:center;">
 Chair of Mathematical Statistics with Applications in Biometrics
@@ -964,7 +969,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=4" target="_blank">Asymptotic Theory</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=4" target="_blank">Asymptotic
+Theory</a>
 </td>
 <td style="text-align:center;">
 Chair of Business and Social Statistics
@@ -977,23 +983,6 @@ Dortmund
 </td>
 <td style="text-align:center;">
 <a href="Technische%20Universit%C3%A4t%20Dortmund%20-%20Vorlesung:%20Asymptotic%20Theory%20(tu-dortmund.de)" target="_blank">no</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=5" target="_blank">Advanced Econometrics</a><br> Course in the module ‘Econometrics’
-</td>
-<td style="text-align:center;">
-Chair of Econometrics
-</td>
-<td style="text-align:center;">
-Essen
-</td>
-<td style="text-align:center;">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACinX6EAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFERTU2NTJEMEQyRDExRTY5MUVCQTMxOUMzRTQ4OUQ4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFERTU2NTJFMEQyRDExRTY5MUVCQTMxOUMzRTQ4OUQ4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MURFNTY1MkIwRDJEMTFFNjkxRUJBMzE5QzNFNDg5RDgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MURFNTY1MkMwRDJEMTFFNjkxRUJBMzE5QzNFNDg5RDgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4LW+oDAAAIsElEQVR42sxZ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" style="width:21px;height:12px;" alt="UK">
-</td>
-<td style="text-align:center;">
-<a href="https://www.oek.wiwi.uni-due.de/studium-lehre/lehrveranstaltungen/wintersemester-20-21/neuere-entwicklungen-der-oekonometrie-vorlesung-11976/" target="_blank">no</a>
 </td>
 </tr>
 <tr>
@@ -1015,7 +1004,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=6" target="_blank">Case Studies</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=6" target="_blank">Case
+Studies</a>
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1032,7 +1022,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Multiples Hypothesentesten</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Multiples
+Hypothesentesten</a>
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1049,7 +1040,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=7" target="_blank">Time Series Analysis</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=7" target="_blank">Time
+Series Analysis</a>
 </td>
 <td style="text-align:center;">
 Chair of Econometrics
@@ -1066,24 +1058,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-NA
-</td>
-<td style="text-align:center;">
-Chair of Theoretical and Applied Microeconomics
-</td>
-<td style="text-align:center;">
-Bochum
-</td>
-<td style="text-align:center;">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAmCAIAAAD7pgrOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjZFMUI5MDQ1MEM3MjExRTY4MTcyRDlCOEZDMDU3Rjc3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjZFMUI5MDQ2MEM3MjExRTY4MTcyRDlCOEZDMDU3Rjc3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NkUxQjkwNDMwQzcyMTFFNjgxNzJEOUI4RkMwNTdGNzciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkUxQjkwNDQwQzcyMTFFNjgxNzJEOUI4RkMwNTdGNzciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6gw/inAAAAVklEQVR42uzWUQ2AMAxF0Y5MxCThDI1TMAXwCXjg74VzHZw0TVslSZL039qeDljhgH6FA7YCAAAAAABIvsR3OmAc4c/cM8MnUKclBgAAAAAAAPjaK8AAbScGyes+6bEAAAAASUVORK5CYII5OTg=" style="width:21px;height:12px;" alt="DE">
-</td>
-<td style="text-align:center;">
-<a href="https://vvz.ruhr-uni-bochum.de/campus/all/event.asp?objgguid=NEW&amp;from=&amp;gguid=0x51E7ACC14F354022996527B9095AB7CB&amp;mode=&amp;tguid=0x80B5E42E2E744540BF79A272358D1095&amp;lang=en" target="_blank">no</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=17" target="_blank">Current Topics in Health Economics</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=17" target="_blank">Current
+Topics in Health Economics</a>
 </td>
 <td style="text-align:center;">
 Adjunct Professorship of Health Economics
@@ -1100,7 +1076,8 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=18" target="_blank">Macroeconomics II</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=18" target="_blank">Macroeconomics
+II</a>
 </td>
 <td style="text-align:center;">
 Chair of Macroeconomics
@@ -1117,13 +1094,14 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=19" target="_blank">Market- and Non-Market Valuation of Environmental Goods</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=19" target="_blank">Market-
+and Non-Market Valuation of Environmental Goods</a>
 </td>
 <td style="text-align:center;">
 Chair of Energy Economics and Applied Econometrics
 </td>
 <td style="text-align:center;">
-RWI, Essen
+RWI, Bochum
 </td>
 <td style="text-align:center;">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACinX6EAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFERTU2NTJEMEQyRDExRTY5MUVCQTMxOUMzRTQ4OUQ4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFERTU2NTJFMEQyRDExRTY5MUVCQTMxOUMzRTQ4OUQ4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MURFNTY1MkIwRDJEMTFFNjkxRUJBMzE5QzNFNDg5RDgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MURFNTY1MkMwRDJEMTFFNjkxRUJBMzE5QzNFNDg5RDgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4LW+oDAAAIsElEQVR42sxZ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" style="width:21px;height:12px;" alt="UK">
@@ -1134,7 +1112,8 @@ RWI, Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=20" target="_blank">Microeconomics I</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=20" target="_blank">Microeconomics
+I</a>
 </td>
 <td style="text-align:center;">
 Chair of Applied Microeconomics
@@ -1151,7 +1130,8 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=21" target="_blank">Public Economics</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=21" target="_blank">Public
+Economics</a>
 </td>
 <td style="text-align:center;">
 Chair of Public Finance and Economic Policy
@@ -1168,7 +1148,8 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=22" target="_blank">Seminar on Health Economics and Health Policy</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=22" target="_blank">Seminar
+on Health Economics and Health Policy</a>
 </td>
 <td style="text-align:center;">
 Adjunct Professorship of Health Economics
@@ -1185,7 +1166,8 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=24" target="_blank">Applied Econometrics with R</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=24" target="_blank">Applied
+Econometrics with R</a>
 </td>
 <td style="text-align:center;">
 Chair of Statistics/Econometrics
@@ -1202,7 +1184,8 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=25" target="_blank">Applied Time Series Analysis</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=25" target="_blank">Applied
+Time Series Analysis</a>
 </td>
 <td style="text-align:center;">
 Chair of Statistics/Econometrics
@@ -1219,7 +1202,8 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=26" target="_blank">Introduction to Data Analysis using Stata</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=26" target="_blank">Introduction
+to Data Analysis using Stata</a>
 </td>
 <td style="text-align:center;">
 Chair of Empirical Economics
@@ -1236,7 +1220,8 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=27" target="_blank">Introduction to Empirical Macroeconomics</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=27" target="_blank">Introduction
+to Empirical Macroeconomics</a>
 </td>
 <td style="text-align:center;">
 Chair of Empirical Macroeconomics
@@ -1253,7 +1238,8 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=28" target="_blank">Intermediate Data Analysis using Stata</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=28" target="_blank">Intermediate
+Data Analysis using Stata</a>
 </td>
 <td style="text-align:center;">
 Chair of Empirical Economics
@@ -1270,7 +1256,8 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=29" target="_blank">Econometric Evaluation of Economic Policies</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=29" target="_blank">Econometric
+Evaluation of Economic Policies</a>
 </td>
 <td style="text-align:center;">
 Chair of Empirical Economics
@@ -1287,7 +1274,8 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=30" target="_blank">Seminar in Microeconometrics</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=30" target="_blank">Seminar
+in Microeconometrics</a>
 </td>
 <td style="text-align:center;">
 Chair of Empirical Economics
@@ -1304,7 +1292,8 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=31" target="_blank">Financial Econometrics</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=31" target="_blank">Financial
+Econometrics</a>
 </td>
 <td style="text-align:center;">
 Chair of Statistics/Econometrics
@@ -1321,7 +1310,8 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=32" target="_blank">Introduction to Microeconometrics</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=32" target="_blank">Introduction
+to Microeconometrics</a>
 </td>
 <td style="text-align:center;">
 Chair of Empirical Economics
@@ -1338,7 +1328,8 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=33" target="_blank">Multivariate Statistical Methods</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=33" target="_blank">Multivariate
+Statistical Methods</a>
 </td>
 <td style="text-align:center;">
 Chair of Statistics/Econometrics
@@ -1355,7 +1346,8 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=34" target="_blank">Seminar in Econometrics</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=34" target="_blank">Seminar
+in Econometrics</a>
 </td>
 <td style="text-align:center;">
 Chair of Statistics/Econometrics
@@ -1372,7 +1364,8 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=35" target="_blank">Applied Economic Policy</a><br> Course in the module ‘Seminar in Applied Economic Policy’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=35" target="_blank">Seminar
+in Applied Economic Policy</a>
 </td>
 <td style="text-align:center;">
 Chair of Economic Policy and Applied Econometrics
@@ -1389,7 +1382,9 @@ Bochum
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=36" target="_blank">Advanced Business Cycle Analysis</a><br> Course in the module ‘Applied Economics III’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=36" target="_blank">Advanced
+Business Cycle Analysis</a><br> Course in the module ‘Applied Economics
+III’
 </td>
 <td style="text-align:center;">
 Professorship of Applied Economics
@@ -1406,7 +1401,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=37" target="_blank">Law and Economics</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=37" target="_blank">Law
+and Economics</a>
 </td>
 <td style="text-align:center;">
 Professorship of Public Economics
@@ -1423,7 +1419,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=38" target="_blank">Dynamic Macroeconomics</a><br> Course in the module ‘Makroökonomie IV’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=38" target="_blank">Dynamic
+Macroeconomics</a><br> Course in the module ‘Makroökonomie IV’
 </td>
 <td style="text-align:center;">
 Professorship Macroeconomics
@@ -1440,7 +1437,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=39" target="_blank">Auctions: Theory, Applications and Experiments</a><br> Course in the module ‘Mikroökonomie II’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=39" target="_blank">Auctions:
+Theory, Applications and Experiments</a><br> Course in the module
+‘Mikroökonomie II’
 </td>
 <td style="text-align:center;">
 Chair of Microeconomic Theory
@@ -1457,7 +1456,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=39" target="_blank">Economics of Information</a><br> Course in the module ‘Mikroökonomie II’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=39" target="_blank">Economics
+of Information</a><br> Course in the module ‘Mikroökonomie II’
 </td>
 <td style="text-align:center;">
 Chair of Microeconomic Theory
@@ -1474,7 +1474,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=39" target="_blank">Seminar in Economic Theory I</a><br> Course in the module ‘Mikroökonomie II’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=39" target="_blank">Seminar
+in Economic Theory I</a><br> Course in the module ‘Mikroökonomie II’
 </td>
 <td style="text-align:center;">
 Chair of Microeconomic Theory
@@ -1491,7 +1492,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=40" target="_blank">Game Theory</a><br> Course in the module ‘Mikroökonomie IV’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=40" target="_blank">Game
+Theory</a><br> Course in the module ‘Mikroökonomie IV’
 </td>
 <td style="text-align:center;">
 Chair of Microeconomic Theory
@@ -1508,7 +1510,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=41" target="_blank">Machine Learning for Economic Data</a><br> Course in the module ‘Advanced Topics in Applied Econometrics’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=41" target="_blank">Machine
+Learning for Economic Data</a><br> Course in the module ‘Advanced Topics
+in Applied Econometrics’
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1525,7 +1529,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=41" target="_blank">Programming with Julia</a><br> Course in the module ‘Advanced Topics in Applied Econometrics’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=41" target="_blank">Programming
+Course with R</a><br> Course in the module ‘Advanced Topics in Applied
+Econometrics’
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1542,7 +1548,46 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=42" target="_blank">Applied Monetary Economics</a><br> Course in the module ‘Applied Economics I’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=41" target="_blank">Programming
+with Python</a><br> Course in the module ‘Advanced Topics in Applied
+Econometrics’
+</td>
+<td style="text-align:center;">
+Faculty of Statistics
+</td>
+<td style="text-align:center;">
+Dortmund
+</td>
+<td style="text-align:center;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAmCAIAAAD7pgrOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjZFMUI5MDQ1MEM3MjExRTY4MTcyRDlCOEZDMDU3Rjc3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjZFMUI5MDQ2MEM3MjExRTY4MTcyRDlCOEZDMDU3Rjc3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NkUxQjkwNDMwQzcyMTFFNjgxNzJEOUI4RkMwNTdGNzciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkUxQjkwNDQwQzcyMTFFNjgxNzJEOUI4RkMwNTdGNzciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6gw/inAAAAVklEQVR42uzWUQ2AMAxF0Y5MxCThDI1TMAXwCXjg74VzHZw0TVslSZL039qeDljhgH6FA7YCAAAAAABIvsR3OmAc4c/cM8MnUKclBgAAAAAAAPjaK8AAbScGyes+6bEAAAAASUVORK5CYII5OTg=" style="width:21px;height:12px;" alt="DE"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACinX6EAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFERTU2NTJEMEQyRDExRTY5MUVCQTMxOUMzRTQ4OUQ4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFERTU2NTJFMEQyRDExRTY5MUVCQTMxOUMzRTQ4OUQ4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MURFNTY1MkIwRDJEMTFFNjkxRUJBMzE5QzNFNDg5RDgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MURFNTY1MkMwRDJEMTFFNjkxRUJBMzE5QzNFNDg5RDgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4LW+oDAAAIsElEQVR42sxZ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" style="width:21px;height:12px;padding-left:2px" alt="UK">
+</td>
+<td style="text-align:center;">
+<a href="NA" target="_blank">no</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;width: 15em; font-weight: bold;">
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=41" target="_blank">Programming
+with Julia</a><br> Course in the module ‘Advanced Topics in Applied
+Econometrics’
+</td>
+<td style="text-align:center;">
+Faculty of Statistics
+</td>
+<td style="text-align:center;">
+Dortmund
+</td>
+<td style="text-align:center;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAmCAIAAAD7pgrOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjZFMUI5MDQ1MEM3MjExRTY4MTcyRDlCOEZDMDU3Rjc3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjZFMUI5MDQ2MEM3MjExRTY4MTcyRDlCOEZDMDU3Rjc3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NkUxQjkwNDMwQzcyMTFFNjgxNzJEOUI4RkMwNTdGNzciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkUxQjkwNDQwQzcyMTFFNjgxNzJEOUI4RkMwNTdGNzciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6gw/inAAAAVklEQVR42uzWUQ2AMAxF0Y5MxCThDI1TMAXwCXjg74VzHZw0TVslSZL039qeDljhgH6FA7YCAAAAAABIvsR3OmAc4c/cM8MnUKclBgAAAAAAAPjaK8AAbScGyes+6bEAAAAASUVORK5CYII5OTg=" style="width:21px;height:12px;" alt="DE"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACinX6EAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFERTU2NTJEMEQyRDExRTY5MUVCQTMxOUMzRTQ4OUQ4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFERTU2NTJFMEQyRDExRTY5MUVCQTMxOUMzRTQ4OUQ4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MURFNTY1MkIwRDJEMTFFNjkxRUJBMzE5QzNFNDg5RDgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MURFNTY1MkMwRDJEMTFFNjkxRUJBMzE5QzNFNDg5RDgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4LW+oDAAAIsElEQVR42sxZ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" style="width:21px;height:12px;padding-left:2px" alt="UK">
+</td>
+<td style="text-align:center;">
+<a href="NA" target="_blank">no</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;width: 15em; font-weight: bold;">
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=42" target="_blank">Applied
+Monetary Economics</a><br> Course in the module ‘Applied Economics I’
 </td>
 <td style="text-align:center;">
 Professorship of Applied Economics
@@ -1559,7 +1604,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=42" target="_blank">Seminar Applied monetary economics</a><br> Course in the module ‘Applied Economics I’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=42" target="_blank">Seminar
+Applied monetary economics</a><br> Course in the module ‘Applied
+Economics I’
 </td>
 <td style="text-align:center;">
 Professorship of Applied Economics
@@ -1576,7 +1623,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=43" target="_blank">Applied Macroeconometrics</a><br> Course in the module ‘Applied Economics II’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=43" target="_blank">Applied
+Macroeconometrics</a><br> Course in the module ‘Applied Economics II’
 </td>
 <td style="text-align:center;">
 Professorship of Applied Economics
@@ -1593,7 +1641,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=44" target="_blank">Quantitative Finance</a><br> Course in the module ‘Finance I’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=44" target="_blank">Quantitative
+Finance</a><br> Course in the module ‘Finance I’
 </td>
 <td style="text-align:center;">
 Professorship of Finance
@@ -1610,7 +1659,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=45" target="_blank">Financial Econometrics</a><br> Course in the module ‘Finance III’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=45" target="_blank">Financial
+Econometrics</a><br> Course in the module ‘Finance III’
 </td>
 <td style="text-align:center;">
 Professorship of Finance
@@ -1622,12 +1672,14 @@ Dortmund
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACinX6EAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFERTU2NTJEMEQyRDExRTY5MUVCQTMxOUMzRTQ4OUQ4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFERTU2NTJFMEQyRDExRTY5MUVCQTMxOUMzRTQ4OUQ4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MURFNTY1MkIwRDJEMTFFNjkxRUJBMzE5QzNFNDg5RDgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MURFNTY1MkMwRDJEMTFFNjkxRUJBMzE5QzNFNDg5RDgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4LW+oDAAAIsElEQVR42sxZC1CU1xk9u/zhsWQFX0CmqcQRELRtWjOdjpXH7rI8HYzhJWR8ZSomVZsqoPGRzqStE03lpSa+UNTEKBKbqMGI7APYBaftVIx1DCwgjTREZNQRlAUFdvvdfx+wsCAoLt6ZOwy7/979zvnOd+537wrqYhc3+GS+M1EsnQfLMBiNOF9Rj7/tqYDmYiNA/8PNGRDgyUbHQyQlzkHRrkXQ//sKdBEpEDgJaT3zgrS+0WDETOVJiOb8HIlrCvH3Ly8D7i5P9n0ULjofAUIBpJJAbFwbgTAfIe7kH8Ot3QUwdnZBLA+Bz9q0Vq7r26teOlmi2CMuEj7rVoIRIaTA5ksC+HlGUYPcg1WoqLr+9EQ869EfePgsZKyWInKaMzo+PYnavEN41NICz/mR8H53BSZEhvG55mb963z3g6OFuEEPEBHwJCK809+BWDKXX/P1iCB+nlXWIOtAJbRjoYhnCDxMFoQNa2SI8HVB52cEPPcQum7ehEdUOKZ/uhsTIkL7f7JHGLVFiYvyRARVK+D/4Qbo/1ENnTQe9XHLcL/8ovXJBfIgaIrScObIMoTMmwF0dQP6R6YvHzfgRlMMD3sgIeDnTq2CYkcMgjWnUftaJHQbtsL11dmYWfoFAkqO24AvVtVCmnIInKr0GlTqGsikQVi/JgnhSxah40ghmnYfJiIS4LkgihTxNsRhc81EBPKTlUZ2/jgpwppxISQUd+Yakvorruj8/AvUvpFPGSepR8nge3inRerWcU6t45VcXtXAzA4c3J15AGrlNajLGBGByFydhIi3UvHgyAk07SyATnIBHnFR8MnoI8JaGmYiNI4gop/UWcYzSepRJHX9MQIe3w/4UQIeYQu8mAeuNXmZgcX5Am/CHP8uc2ORhYjvoCZFhDMTWZUE+bIUdJBHNO0iRUji4fl6NLyZWVoUQSSweZo3SyKi6hkQMQA4M7colvHjp1DDgP/4I1/j0w7n0V+JzUe/JqkzEy+rbLABbhmczdP9iFApqDRUjIggKxF6ZpaMiDMlg4hYSCSwad01LlqYdh4jVw9C+qo+4LUJZuDRckwryLULPIfiKNc2mBNiC9w+AcMQIZOZS2N5Kq+IG3kFdomwlAYjIseiCDIqo3F03sabG/UKVqlPdzVJnQfeTIDlVON5g2qcB57ParxfAoZRIsealMeOnl6oT1+GuvgKfi1liohDhGYhuj4vQuvez3CPiJhAtef9h7cgDg+B0NXFhojtO9W0hGHEBHT39mJuiD82/ZGZmxtlvBA1+47xNc4y7ns4l4D3ZfwBkXWWJ7wKlxhw9l0iM3D98PgECatP3KG/k0YSGOsQOzu74UyZiZLPwvJFc8A1NeN2wQnoq69CKBLBI0aKickLIHRztX6ulzLRcOMOZk6fgg7qBOuG6gQVhRC99gvoGm/Db/pkOF1vRDMB77x+A04eYkx+M35Qxu9TAo+cugyFth7dtIYbZVw4cu9pERiNxhETMBZDf7UWutA37BIQpPkKrj+b6chOooXTX/rPUxu0wM5rQ42umnq7ZsRe01+5ht6HfZIdybpPu9EIqicGOlQBAgaeGhi7ZPI+YXSsAgRDBDMeQ8AXr2MPGJxdOY4bA46P5flJ/zgNblQdyrPO9DjEwhkNBgdjFwxJANsKHX2+FlBj8lS7wEi2JuOAbbDp3T+ZDK9/H0AP+e76K1wC/ewHOsIteNS7AOu8HMq4s7NZ6oJB8he9OtvRjRC4lLVFozqkdNLpjKPMhQf7YWn8LyEecHHZrtLi7onT6G1rh6vvT/GTlakwBPjj+vd34P/KZBgfDt2bG8zv1dOzfvRsf4oM+k7cLTqLdoWWX4MlbsryRXj0kheOFF6CqqwWPUZTKzyazYQ7efLSY1Jm1predCz91W9nYN2KeVgYGWQDngG/lXsA986VwmXqVLy88k24L0lG8f96sH39Xni97IkvP0kdXrLmyNd/dAF3b7Zj41oZYiUBpu1K5IZJdMZwEovR+nEBfti8Fa27DsFrzXKkJMfDY5IY2Z+U4VtNtekUaDkMGR+3C7zo8vjzuJMAYdGzeeDshGeTcSUBzzMD9/FBwLbNEC1dBOUPPcjapoaajqdo70Ti0t+MOCtORLS2TAftpSaEh/ohfUUwYqUBPAkTE2L52a7Q4FbOfjS/vw0ue45iQXoakvcloKSxC9l7yqCp0JkkK3rccXg44JSR0OAZfACDgKsq+QDufUPAvb154O7LUgh4N3ZsKuVvlaw3MO7OJvcfzU7BrupcnEjadVBp6iGj43FGmokINtgFJ5vtpRVoyd0PXeaf4ZqTD0n6CsRkJ+F8oxRZH6uh1dQNe0PFDQl8HgFPGwI4Sb2NMu7s7YWA7VvgvjgZiuZuZBNwdsHKn8eHuIEZdb9gubMsr4O6sgHhIX6kxGDMtxBBx2M2GREsLl3mX+CaewiSdb9DdHYiSv4r40vDqogBRHADgQdTjWeuHAz8flkVWrL3m6TuNRX+2zbBnUm9uQc7tihI6t8RcCY5Bpwb+8bJTIRJEQ2kCD8+zhjJYCJYnBYipKSIaFJECSliBymicoAiON7c6AvYXT9bME4eZKOUdgJ+ixbsyzgBX2IGzqRO7jtmGX8CRchoN8qguGPtErEPtRmsNA6aFZGEC9+HY8dulbU0OAY8w47U2Y8ibIG2YhNw/w/fg2hZKtQM+GbFAKlzcGwzYZ+IzLdDEBPmb0NE24VyPoHW0shIQ1Q2M0sZssgsOfZrz5DAvRjwjSZzs5txBwMfKRH9SoPdFrNpVUT6B3DNOsATEUMewRC8YAF+a+dB3Dv9DTiq8Rlb38OLyxnwXuRQjStVNc8P8OGIqCAitPWQkxKYWQ4sjbaSMpNZZnwA0f7jHPdA+8/Wlrz87nZ6Q+DijJfeT8eUlYuhuQ18tEXJX4nD8JwCH+Y6X6mug7Kige8jNvw+FHIqdfart0e0lJ9t59Vo3Xv09v8FGAAWg1LgHMvcbwAAAABJRU5ErkJggjMxMzY=" style="width:21px;height:12px;" alt="UK">
 </td>
 <td style="text-align:center;">
-<a href="https://www.lsf.tu-dortmund.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;publishid=248560&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung" target="_blank">nein</a>
+<a href="https://www.lsf.tu-dortmund.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;publishid=248560&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung" target="_blank">no</a>
 </td>
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=46" target="_blank">Research Topics in Finance, Risk- and Resourcemanagement</a><br> Course in the module ‘Finance V’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=46" target="_blank">Research
+Topics in Finance, Risk- and Resourcemanagement</a><br> Course in the
+module ‘Finance V’
 </td>
 <td style="text-align:center;">
 Professorship of Finance
@@ -1644,7 +1696,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=47" target="_blank">Microeconometrics and Empirical Applications</a><br> Course in the module ‘Wirtschaftspolitik II’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=47" target="_blank">Microeconometrics
+and Empirical Applications</a><br> Course in the module
+‘Wirtschaftspolitik II’
 </td>
 <td style="text-align:center;">
 Chair of Economic Policy
@@ -1661,7 +1715,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=48" target="_blank">Empirisches Seminar zur Wirtschaftspolitik</a><br> Course in the module ‘Wirtschaftspolitik IV’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=48" target="_blank">Empirisches
+Seminar zur Wirtschaftspolitik</a><br> Course in the module
+‘Wirtschaftspolitik IV’
 </td>
 <td style="text-align:center;">
 Chair of Economic Policy
@@ -1678,7 +1734,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Advanced Econometrics</a><br> Course in the module ‘Advanced Topics in Econometric Methods’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Advanced
+Econometrics</a><br> Course in the module ‘Advanced Topics in
+Econometric Methods’
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1695,7 +1753,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Advanced Statistical Learning</a><br> Course in the module ‘Advanced Topics in Econometric Methods’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Advanced
+Statistical Learning</a><br> Course in the module ‘Advanced Topics in
+Econometric Methods’
 </td>
 <td style="text-align:center;">
 Chair of Statistical Methods for Big Data
@@ -1712,7 +1772,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=49" target="_blank">Bayesian Data Analysis</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=49" target="_blank">Bayesian
+Data Analysis</a>
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1729,7 +1790,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Bayesian Econometrics</a><br> Course in the module ‘Advanced Topics in Econometric Methods’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Bayesian
+Econometrics</a><br> Course in the module ‘Advanced Topics in
+Econometric Methods’
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1746,10 +1809,11 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Bayes-Statistik</a><br> Course in the module ‘Advanced Topics in Econometric Methods’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Bayes-Statistik</a><br>
+Course in the module ‘Advanced Topics in Econometric Methods’
 </td>
 <td style="text-align:center;">
-NA
+Chair of Mathematical Statistics with Applications in Biometrics
 </td>
 <td style="text-align:center;">
 Dortmund
@@ -1763,7 +1827,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Bootstrap Methods</a><br> Course in the module ‘Advanced Topics in Econometric Methods’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Bootstrap
+Methods</a><br> Course in the module ‘Advanced Topics in Econometric
+Methods’
 </td>
 <td style="text-align:center;">
 Chair of Business and Social Statistics
@@ -1780,7 +1846,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Econometrics of treatment effects and policy evaluation</a><br> Course in the module ‘Advanced Topics in Econometric Methods’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Econometrics
+of treatment effects and policy evaluation</a><br> Course in the module
+‘Advanced Topics in Econometric Methods’
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1797,7 +1865,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Generalisierte Lineare Modelle</a><br> Course in the module ‘Advanced Topics in Econometric Methods’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Generalisierte
+Lineare Modelle</a><br> Course in the module ‘Advanced Topics in
+Econometric Methods’
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1814,7 +1884,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Netzwerkanalyse</a><br> Course in the module ‘Advanced Topics in Econometric Methods’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Netzwerkanalyse</a><br>
+Course in the module ‘Advanced Topics in Econometric Methods’
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1831,7 +1902,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Robuste statistische Verfahren</a><br> Course in the module ‘Advanced Topics in Econometric Methods’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Robuste
+statistische Verfahren</a><br> Course in the module ‘Advanced Topics in
+Econometric Methods’
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1848,7 +1921,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Sequentielle Verfahren</a><br> Course in the module ‘Advanced Topics in Econometric Methods’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Sequentielle
+Verfahren</a><br> Course in the module ‘Advanced Topics in Econometric
+Methods’
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1865,7 +1940,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Statistik extremer Risiken</a><br> Course in the module ‘Advanced Topics in Econometric Methods’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Statistik
+extremer Risiken</a><br> Course in the module ‘Advanced Topics in
+Econometric Methods’
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1882,7 +1959,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Stochastische Prozesse</a><br> Course in the module ‘Advanced Topics in Econometric Methods’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Stochastische
+Prozesse</a><br> Course in the module ‘Advanced Topics in Econometric
+Methods’
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1899,7 +1978,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Survival Analysis</a><br> Course in the module ‘Advanced Topics in Econometric Methods’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Survival
+Analysis</a><br> Course in the module ‘Advanced Topics in Econometric
+Methods’
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1916,7 +1997,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Unit Root and Cointegration Analysis</a><br> Course in the module ‘Advanced Topics in Econometric Methods’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=50" target="_blank">Unit
+Root and Cointegration Analysis</a><br> Course in the module ‘Advanced
+Topics in Econometric Methods’
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1933,7 +2016,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=52" target="_blank">Resampling Verfahren</a><br> Course in the module ‘Seminar in Econometrics’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=52" target="_blank">Resampling
+Verfahren</a><br> Course in the module ‘Seminar in Econometrics’
 </td>
 <td style="text-align:center;">
 Faculty of Statistics
@@ -1950,7 +2034,9 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=52" target="_blank">Seminar in Econometrics (Time Series Econometrics)</a><br> Course in the module ‘Seminar in Econometrics’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=52" target="_blank">Seminar
+in Econometrics (Time Series Econometrics)</a><br> Course in the module
+‘Seminar in Econometrics’
 </td>
 <td style="text-align:center;">
 Chair of Business and Social Statistics
@@ -1967,7 +2053,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=53" target="_blank">Maschinelles Lernen</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=53" target="_blank">Maschinelles
+Lernen</a>
 </td>
 <td style="text-align:center;">
 Chair of Artificial Intelligence
@@ -1984,7 +2071,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=54" target="_blank">Wissensentdeckung in Datenbanken</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=54" target="_blank">Wissensentdeckung
+in Datenbanken</a>
 </td>
 <td style="text-align:center;">
 Chair of Artificial Intelligence
@@ -2001,7 +2089,8 @@ Dortmund
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=55" target="_blank">Advanced Forecasting in Energy Markets</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=55" target="_blank">Advanced
+Forecasting in Energy Markets</a>
 </td>
 <td style="text-align:center;">
 Chair of Environmental Economics, esp. Economics of Renewable Energy
@@ -2018,7 +2107,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=56" target="_blank">Empirie der internationalen Geld- und Finanzmärkte</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=56" target="_blank">Empirie
+der internationalen Geld- und Finanzmärkte</a>
 </td>
 <td style="text-align:center;">
 Chair of Environmental Economics, esp. Economics of Renewable Energy
@@ -2035,7 +2125,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=57" target="_blank">Energy Markets and Price Formation</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=57" target="_blank">Energy
+Markets and Price Formation</a>
 </td>
 <td style="text-align:center;">
 Lehrstuhl für Energiewirtschaft
@@ -2069,7 +2160,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=59" target="_blank">International Capital Movements: Theory and Econometric Evidence</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=59" target="_blank">International
+Capital Movements: Theory and Econometric Evidence</a>
 </td>
 <td style="text-align:center;">
 Chair of International Economics
@@ -2086,7 +2178,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=60" target="_blank">Labour Economics and Public Policy</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=60" target="_blank">Labour
+Economics and Public Policy</a>
 </td>
 <td style="text-align:center;">
 Lehrstuhl für Arbeitsmarkt- und Migrationsökonomik
@@ -2103,7 +2196,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=61" target="_blank">Migration Economics</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=61" target="_blank">Migration
+Economics</a>
 </td>
 <td style="text-align:center;">
 Lehrstuhl für Arbeitsmarkt- und Migrationsökonomik
@@ -2120,7 +2214,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=62" target="_blank">Neuere Entwicklungen der Mikroökonomik</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=62" target="_blank">Neuere
+Entwicklungen der Mikroökonomik</a>
 </td>
 <td style="text-align:center;">
 Chair of Microeconomics
@@ -2137,7 +2232,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=63" target="_blank">Seminar Health and Development</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=63" target="_blank">Seminar
+Health and Development</a>
 </td>
 <td style="text-align:center;">
 Chair of Labour and Health Economics
@@ -2154,7 +2250,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=64" target="_blank">Seminar Labour Economics and Public Policy</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=64" target="_blank">Seminar
+Labour Economics and Public Policy</a>
 </td>
 <td style="text-align:center;">
 Lehrstuhl für Arbeitsmarkt- und Migrationsökonomik
@@ -2171,7 +2268,9 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=65" target="_blank">Seminar Soziale Sicherung und Besteuerung: Empirische Studien und eigene Projekte</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=65" target="_blank">Seminar
+Soziale Sicherung und Besteuerung: Empirische Studien und eigene
+Projekte</a>
 </td>
 <td style="text-align:center;">
 Chair of Public Economics
@@ -2188,7 +2287,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=67" target="_blank">Stock Market Anomalies and Quantitative Trading Strategies</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=67" target="_blank">Stock
+Market Anomalies and Quantitative Trading Strategies</a>
 </td>
 <td style="text-align:center;">
 Chair of Finance
@@ -2205,7 +2305,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=69" target="_blank">Advanced R for Econometricians</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=69" target="_blank">Advanced
+R for Econometricians</a>
 </td>
 <td style="text-align:center;">
 Chair of Econometrics
@@ -2222,7 +2323,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=70" target="_blank">Applied Labour Economics</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=70" target="_blank">Applied
+Labour Economics</a>
 </td>
 <td style="text-align:center;">
 Chair of Labour and Health Economics
@@ -2239,7 +2341,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=71" target="_blank">Econometrics of Electricity Markets</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=71" target="_blank">Econometrics
+of Electricity Markets</a>
 </td>
 <td style="text-align:center;">
 Chair of Environmental Economics, esp. Economics of Renewable Energy
@@ -2256,7 +2359,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=72" target="_blank">Empirische Bilanzanalyse</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=72" target="_blank">Empirische
+Bilanzanalyse</a>
 </td>
 <td style="text-align:center;">
 Chair of Statistics
@@ -2273,7 +2377,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=74" target="_blank">Empirical Finance</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=74" target="_blank">Empirical
+Finance</a>
 </td>
 <td style="text-align:center;">
 Chair of Finance
@@ -2290,7 +2395,8 @@ Duisburg
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=75" target="_blank">Empirische Methoden</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=75" target="_blank">Empirische
+Methoden</a>
 </td>
 <td style="text-align:center;">
 Chair of Statistics
@@ -2307,7 +2413,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=76" target="_blank">Financial Mathematics</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=76" target="_blank">Financial
+Mathematics</a>
 </td>
 <td style="text-align:center;">
 Chair for Energy Trading and Finance
@@ -2324,7 +2431,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=77" target="_blank">Financial Risk Management</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=77" target="_blank">Financial
+Risk Management</a>
 </td>
 <td style="text-align:center;">
 Chair for Energy Trading and Finance
@@ -2341,7 +2449,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=78" target="_blank">Inequality in Health</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=78" target="_blank">Inequality
+in Health</a>
 </td>
 <td style="text-align:center;">
 Chair of Health Economics
@@ -2375,7 +2484,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=81" target="_blank">Portfolio Management</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=81" target="_blank">Portfolio
+Management</a>
 </td>
 <td style="text-align:center;">
 Chair of Environmental Economics, esp. Economics of Renewable Energy
@@ -2392,7 +2502,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=82" target="_blank">Practising Econometric Research</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=82" target="_blank">Practising
+Econometric Research</a>
 </td>
 <td style="text-align:center;">
 Chair of Econometrics
@@ -2409,7 +2520,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=84" target="_blank">Quantitative Modelle internationaler Wirtschaftsbeziehungen</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=84" target="_blank">Quantitative
+Modelle internationaler Wirtschaftsbeziehungen</a>
 </td>
 <td style="text-align:center;">
 Chair of International Economics
@@ -2426,7 +2538,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=85" target="_blank">Quantitative Climate Finance</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=85" target="_blank">Quantitative
+Climate Finance</a>
 </td>
 <td style="text-align:center;">
 Chair for Energy Trading and Finance
@@ -2443,7 +2556,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=86" target="_blank">Bayesian Econometrics</a><br> Course in the module ‘Fortgeschrittene Ökonometrie’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=86" target="_blank">Bayesian
+Econometrics</a><br> Course in the module ‘Fortgeschrittene Ökonometrie’
 </td>
 <td style="text-align:center;">
 Chair of Econometrics
@@ -2460,7 +2574,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=86" target="_blank">Nonparametric Econometrics</a><br> Course in the module ‘Fortgeschrittene Ökonometrie’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=86" target="_blank">Nonparametric
+Econometrics</a><br> Course in the module ‘Fortgeschrittene Ökonometrie’
 </td>
 <td style="text-align:center;">
 Chair of Econometrics
@@ -2477,7 +2592,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=86" target="_blank">Statistical Learning</a><br> Course in the module ‘Fortgeschrittene Ökonometrie’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=86" target="_blank">Statistical
+Learning</a><br> Course in the module ‘Fortgeschrittene Ökonometrie’
 </td>
 <td style="text-align:center;">
 Chair of Econometrics
@@ -2489,12 +2605,14 @@ Essen
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAmCAIAAAD7pgrOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjZFMUI5MDQ1MEM3MjExRTY4MTcyRDlCOEZDMDU3Rjc3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjZFMUI5MDQ2MEM3MjExRTY4MTcyRDlCOEZDMDU3Rjc3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NkUxQjkwNDMwQzcyMTFFNjgxNzJEOUI4RkMwNTdGNzciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkUxQjkwNDQwQzcyMTFFNjgxNzJEOUI4RkMwNTdGNzciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6gw/inAAAAVklEQVR42uzWUQ2AMAxF0Y5MxCThDI1TMAXwCXjg74VzHZw0TVslSZL039qeDljhgH6FA7YCAAAAAABIvsR3OmAc4c/cM8MnUKclBgAAAAAAAPjaK8AAbScGyes+6bEAAAAASUVORK5CYII5OTg=" style="width:21px;height:12px;" alt="DE"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACinX6EAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFERTU2NTJEMEQyRDExRTY5MUVCQTMxOUMzRTQ4OUQ4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFERTU2NTJFMEQyRDExRTY5MUVCQTMxOUMzRTQ4OUQ4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MURFNTY1MkIwRDJEMTFFNjkxRUJBMzE5QzNFNDg5RDgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MURFNTY1MkMwRDJEMTFFNjkxRUJBMzE5QzNFNDg5RDgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4LW+oDAAAIsElEQVR42sxZ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" style="width:21px;height:12px;padding-left:2px" alt="UK">
 </td>
 <td style="text-align:center;">
-<a href="https://www.oek.wiwi.uni-due.de/studium-lehre/lehrveranstaltungen/sommersemester-21/fortgeschrittene-oekonometrie-vorlesung-13094/" target="_blank">no</a>
+<a href="https://www.oek.wiwi.uni-due.de/studium-lehre/lehrveranstaltungen/sommersemester-22/fortgeschrittene-oekonometrie-vorlesung-13899/" target="_blank">yes</a>
 </td>
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=86" target="_blank">Statistical Modelling of Extremes</a><br> Course in the module ‘Fortgeschrittene Ökonometrie’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=86" target="_blank">Statistical
+Modelling of Extremes</a><br> Course in the module ‘Fortgeschrittene
+Ökonometrie’
 </td>
 <td style="text-align:center;">
 Chair of Econometrics
@@ -2511,7 +2629,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=88" target="_blank">Causality and Programme Evaluation</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=88" target="_blank">Causality
+and Programme Evaluation</a>
 </td>
 <td style="text-align:center;">
 Chair of Health Economics
@@ -2528,7 +2647,9 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=90" target="_blank">Fachseminar Ökonometrische Methoden</a><br> Course in the module ‘Seminar Ökonometrische Methoden’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=90" target="_blank">Fachseminar
+Ökonometrische Methoden</a><br> Course in the module ‘Seminar
+Ökonometrische Methoden’
 </td>
 <td style="text-align:center;">
 Chair of Econometrics
@@ -2562,7 +2683,8 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=93" target="_blank">Statistisches Seminar</a>
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=93" target="_blank">Statistisches
+Seminar</a>
 </td>
 <td style="text-align:center;">
 Chair of Statistics
@@ -2579,7 +2701,9 @@ Essen
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; font-weight: bold;">
-<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=5" target="_blank">Recent Developments in Econometrics</a><br> Course in the module ‘Econometrics (ME2)’
+<a href="https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page=5" target="_blank">Recent
+Developments in Econometrics</a><br> Course in the module ‘Econometrics
+(ME2)’
 </td>
 <td style="text-align:center;">
 Chair of Econometrics
