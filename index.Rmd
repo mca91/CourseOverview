@@ -14,7 +14,7 @@ library(kableExtra)
 library(dplyr)
 ```
 
-````{r, echo = F}
+```{r, echo = F}
 mhb_baseurl <- 'https://www.statistik.tu-dortmund.de/fileadmin/user_upload/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_2022_01_26.pdf#page='
 
 Kurse <- read_xlsx("KurseMscECMX_SoSe22.xlsx", sheet = "Kursliste") %>%
