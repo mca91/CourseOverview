@@ -15,7 +15,7 @@ library(dplyr)
 ```
 
 ```{r, echo = F}
-mhb_baseurl <- 'https://statistik.tu-dortmund.de/storages/statistik/r/Downloads/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_091023.pdf#page='
+mhb_baseurl <- 'https://statistik.tu-dortmund.de/storages/statistik/r/Downloads/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_091023_01.pdf#page='
 
 Kurse <- read_xlsx("KurseMscECMX_WiSe23.xlsx", sheet = "Kursliste") %>%
   distinct(Kurs, Ort, .keep_all = T) %>% 
