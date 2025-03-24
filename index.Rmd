@@ -15,7 +15,9 @@ library(dplyr)
 ```
 
 ```{r, echo = F, warning=FALSE, message=F}
-mhb_baseurl <- 'https://statistik.tu-dortmund.de/storages/statistik/r/Downloads/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_091023_01.pdf#page='
+# mhb_baseurl <- 'https://statistik.tu-dortmund.de/storages/statistik/r/Downloads/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_091023_01.pdf#page='
+
+mhb_baseurl <- 'https://statistik.tu-dortmund.de/storages/statistik/r/Downloads/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_100724_01.pdf#page='
 
 Kurse <- read_xlsx("KurseMscECMX_SoSe24.xlsx", sheet = "Kursliste") %>%
   distinct(Kurs, Ort, .keep_all = T) %>% 
@@ -26,7 +28,7 @@ Kurse <- read_xlsx("KurseMscECMX_SoSe24.xlsx", sheet = "Kursliste") %>%
     Language = Sprache,
     Group = Modulgruppe,
     Credits = CP,
-    'Summer 24' = 'aktuell_angeboten'
+    'Winter 24' = 'aktuell_angeboten'
   )
 
 # Set a 'coming soon' text for courses without URL and add link to 404 page. Add comment if module name is different than course name
@@ -50,8 +52,8 @@ Kurse$Language[Kurse$Language == "englisch"] <- "<img src='UK_flag.png' style='w
 Kurse$Language[Kurse$Language == "deutsch/englisch" | Kurse$Language =="english/german"] <- "<img src='germany_flag.png' style='width:21px;height:12px;' alt='DE'><img src='UK_flag.png' style='width:21px;height:12px;padding-left:2px' alt='UK'>"
 
 # select columns of interest
-Kurse <- Kurse %>% select(Course, Group, Credits, `Offered by`, Location, Language, 'Summer 24') %>%
-  rename("Offered in Summer 24?" = "Summer 24")
+Kurse <- Kurse %>% select(Course, Group, Credits, `Offered by`, Location, Language, 'Winter 24') %>%
+  rename("Offered in Winter 24?" = "Winter 24")
 
 kable(Kurse, 
       escape = F,  
