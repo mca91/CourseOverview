@@ -35,13 +35,15 @@ Kurse <- read_xlsx("KurseMscECMX_WiSe25.xlsx", sheet = "Kursliste") %>%
 
 # Set a 'coming soon' text for courses without URL and add link to 404 page. Add comment if module name is different than course name
 Kurse <- Kurse %>% 
-  mutate(
-    Course = ifelse(MHB == "NA",
-                    paste("<a href='../../404.html'>", Kurs, "</a>", "<br> New course. More info coming soon!", sep = ""), 
-                    ifelse(Kurs != Modulname,
-                           paste("<a href='", mhb_baseurl, MHB, "'", "target='_blank'", ">", Kurs, "</a>", "<br> Course in the module '", Modulname, "'", sep = ""),
-                           Course))
-  )
+  mutate(Course = dplyr::case_when(
+    # NO link to MHB
+    is.na(MHB) ~ paste("<a href='../../404.html'>", Kurs, "</a>","<br> New course. More info coming soon!", sep = ""),
+    MHB == "NA" ~ paste("<a href='../../404.html'>", Kurs, "</a>","<br> New course. More info coming soon!", sep = ""),
+    # 
+    Kurs != Modulname & !is.na(MHB) ~ paste("<a href='", mhb_baseurl, MHB, "'", "target='_blank'", ">", Kurs, "</a>", "<br> Course in the module '", Modulname, "'", sep = ""),
+    # default values
+    .default = Course
+  ))
 
 # abbrev. course sections
 #Kurse$Section[Kurse$Section == 'ME5 (Economics)'] <- 'ME5'
