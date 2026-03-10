@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(readxl)
 library(kableExtra)
 library(dplyr)
+library(glue)
 ```
 
 ```{r, echo = F, warning=FALSE, message=F}
@@ -28,26 +29,29 @@ mhb_baseurl <- 'https://statistik.tu-dortmund.de/storages/statistik/r/Downloads/
 Kurse <- read_xlsx("KurseMscECMX_SoSe26.xlsx", sheet = "Kursliste") %>%
   distinct(Kurs, Ort, .keep_all = T) %>% 
   mutate(Course = paste("<a href='", mhb_baseurl, MHB, "'", " target='_blank'", ">", Kurs, "</a>", sep = "")) %>%
-  mutate('aktuell_angeboten' = paste("<a href='", Link_aktuelle_Veranstaltungsuebersicht, "'", " target='_blank'", ">", aktuell_angeboten, "</a>", sep = "")) %>%
+  mutate('aktuell_angeboten_link' = paste("<a href='", Link_aktuelle_Veranstaltungsuebersicht, "'", " target='_blank'", ">", aktuell_angeboten, "</a>", sep = "")) %>%
   rename(
     Location = Ort, 
     Language = Sprache,
     Group = Modulgruppe,
     Credits = CP,
-    'Summer 26' = 'aktuell_angeboten'
+    'Summer 26' = 'aktuell_angeboten_link'
   )
 
 # Set a 'coming soon' text for courses without URL and add link to 404 page. Add comment if module name is different than course name
 Kurse <- Kurse %>% 
   mutate(Course = dplyr::case_when(
-    # NO link to MHB
-    is.na(MHB) ~ paste("<a href='../../404.html'>", Kurs, "</a>","<br> New course. More info coming soon!", sep = ""),
-    MHB == "NA" ~ paste("<a href='../../404.html'>", Kurs, "</a>","<br> New course. More info coming soon!", sep = ""),
+    # Routines if MHB is not there.
+    is.na(MHB) & aktuell_angeboten == 'no' ~ paste("<a href='../../404.html' target='_blank'>", Kurs, "</a>","<br> New course. More info coming soon!", sep = ""),
+    is.na(MHB) & aktuell_angeboten == 'yes' ~ paste("<a href='", Link_aktuelle_Veranstaltungsuebersicht, "'", " target='_blank'", ">", Kurs, "</a>", sep = ""),
+    MHB == "NA"  & aktuell_angeboten == 'no' ~ paste("<a href='../../404.html' target='_blank'>", Kurs, "</a>","<br> New course. More info coming soon!", sep = ""),
+    MHB == "NA" & aktuell_angeboten == 'yes' ~ paste("<a href='", Link_aktuelle_Veranstaltungsuebersicht, "'", " target='_blank'", ">", Kurs, "</a>", sep = ""),
     # 
     Kurs != Modulname & !is.na(MHB) ~ paste("<a href='", mhb_baseurl, MHB, "'", "target='_blank'", ">", Kurs, "</a>", "<br> Course in the module '", Modulname, "'", sep = ""),
     # default values
     .default = Course
   ))
+
 
 # abbrev. course sections
 #Kurse$Section[Kurse$Section == 'ME5 (Economics)'] <- 'ME5'
