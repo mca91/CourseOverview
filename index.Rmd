@@ -65,7 +65,9 @@ Kurse$Language[Kurse$Language %in% c("deutsch/englisch", "english/german", "deut
 
 # select columns of interest
 Kurse <- Kurse %>% select(Course, Group, Credits, `Offered by`, Location, Language, `Summer 26`) %>%
+  dplyr::arrange(desc(`Summer 26`)) %>%
   rename("Offered in Summer 26?" = "Summer 26")
+  
 
 kable(Kurse, 
       escape = F,  
