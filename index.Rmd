@@ -16,52 +16,40 @@ library(glue)
 ```
 
 ```{r, echo = F, warning=FALSE, message=F}
-# mhb_baseurl <- 'https://statistik.tu-dortmund.de/storages/statistik/r/Downloads/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_091023_01.pdf#page='
-
-# mhb_baseurl <- 'https://statistik.tu-dortmund.de/storages/statistik/r/Downloads/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_100724_01.pdf#page='
-
-#mhb_baseurl <- 'https://statistik.tu-dortmund.de/storages/statistik/r/Downloads/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_290125_Arbeit-3.pdf#page='
-
 # Sommer 2026
 mhb_baseurl <- 'https://statistik.tu-dortmund.de/storages/statistik/r/Downloads/Studium/Studiengaenge-Infos/ModHb_MSc_ECMTX_261125_Arbeit.pdf#page='
 
-
 Kurse <- read_xlsx("KurseMscECMX_SoSe26.xlsx", sheet = "Kursliste") %>%
   distinct(Kurs, Ort, .keep_all = T) %>% 
-  mutate(Course = paste("<a href='", mhb_baseurl, MHB, "'", " target='_blank'", ">", Kurs, "</a>", sep = "")) %>%
-  mutate('aktuell_angeboten_link' = paste("<a href='", Link_aktuelle_Veranstaltungsuebersicht, "'", " target='_blank'", ">", aktuell_angeboten, "</a>", sep = "")) %>%
+  mutate(Course = glue("<a href='{Link_aktuelle_Veranstaltungsuebersicht}' target='_blank'>{Kurs}</a>")) %>%
+  mutate('aktuell_angeboten_link' = glue("<a href='{Link_aktuelle_Veranstaltungsuebersicht}' target='_blank'> {aktuell_angeboten} </a>")) %>% 
   rename(
     Location = Ort, 
     Language = Sprache,
     Group = Modulgruppe,
     Credits = CP,
-    'Summer 26' = 'aktuell_angeboten_link'
+    'Summer 26' = aktuell_angeboten_link
   )
 
 # Set a 'coming soon' text for courses without URL and add link to 404 page. Add comment if module name is different than course name
 Kurse <- Kurse %>% 
   mutate(Course = dplyr::case_when(
     # Routines if MHB is not there.
-    is.na(MHB) & aktuell_angeboten == 'no' ~ paste("<a href='../../404.html' target='_blank'>", Kurs, "</a>","<br> New course. More info coming soon!", sep = ""),
-    is.na(MHB) & aktuell_angeboten == 'yes' ~ paste("<a href='", Link_aktuelle_Veranstaltungsuebersicht, "'", " target='_blank'", ">", Kurs, "</a>", sep = ""),
-    MHB == "NA"  & aktuell_angeboten == 'no' ~ paste("<a href='../../404.html' target='_blank'>", Kurs, "</a>","<br> New course. More info coming soon!", sep = ""),
-    MHB == "NA" & aktuell_angeboten == 'yes' ~ paste("<a href='", Link_aktuelle_Veranstaltungsuebersicht, "'", " target='_blank'", ">", Kurs, "</a>", sep = ""),
+    is.na(MHB) & aktuell_angeboten == 'no' ~ glue("<a href='../../404.html' target='_blank'>{Kurs} </a> <br>New course. More info coming soon!"),
+    is.na(MHB) & aktuell_angeboten == 'yes' ~ glue("<a href='{Link_aktuelle_Veranstaltungsuebersicht}' target='_blank'>{Kurs}</a>"), 
+    MHB == "NA"  & aktuell_angeboten == 'no' ~ glue("<a href='../../404.html' target='_blank'>{Kurs}</a> <br>New course. More info coming soon!"),
+    MHB == "NA" & aktuell_angeboten == 'yes' ~ glue("<a href='{Link_aktuelle_Veranstaltungsuebersicht}' target='_blank'>{Kurs}</a>"),
     # 
-    Kurs != Modulname & !is.na(MHB) ~ paste("<a href='", mhb_baseurl, MHB, "'", "target='_blank'", ">", Kurs, "</a>", "<br> Course in the module '", Modulname, "'", sep = ""),
+    Kurs != Modulname & !is.na(MHB) ~ glue("<a href='{mhb_baseurl}{MHB}' target='_blank'>{Kurs}</a> <br>Course in the module"),
     # default values
     .default = Course
-  ))
-
-
-# abbrev. course sections
-#Kurse$Section[Kurse$Section == 'ME5 (Economics)'] <- 'ME5'
-#Kurse$Section[Kurse$Section == 'ME6 (Applied Econometrics)'] <- 'ME6'
-#Kurse$Section[Kurse$Section == 'ME7 (Econometric Methods)'] <- 'ME7'
-
-# set flag symbols
-Kurse$Language[Kurse$Language == "deutsch"] <- "<img src='germany_flag.png' style='width:21px;height:12px;' alt='DE'>"
-Kurse$Language[Kurse$Language %in% c("englisch", "english")] <- "<img src='UK_flag.png' style='width:21px;height:12px;' alt='UK'>"
-Kurse$Language[Kurse$Language %in% c("deutsch/englisch", "english/german", "deutsch/english")] <- "<img src='germany_flag.png' style='width:21px;height:12px;' alt='DE'><img src='UK_flag.png' style='width:21px;height:12px;padding-left:2px' alt='UK'>"
+  )) %>%
+  dplyr::mutate(Language = dplyr::case_when(
+    Language == 'deutsch' ~ "<img src='germany_flag.png' style='width:21px;height:12px;' alt='DE'>",
+    Language %in% c("englisch", "english", "english (except german gets unanimous vote)") ~ "<img src='UK_flag.png' style='width:21px;height:12px;' alt='UK'>",
+    Language %in%  c("deutsch/englisch", "english/german", "deutsch/english") ~ "<img src='germany_flag.png' style='width:21px;height:12px;' alt='DE'><img src='UK_flag.png' style='width:21px;height:12px;padding-left:2px' alt='UK'>",
+    .default = NA_character_)
+  )
 
 # select columns of interest
 Kurse <- Kurse %>% select(Course, Group, Credits, `Offered by`, Location, Language, `Summer 26`) %>%
